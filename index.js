@@ -62,11 +62,12 @@ function init() {
 ## Description:
 
 ${response.description}
+
 ## Table of Contents
-    1. [Installation](Installation)
-     [Usage](Usage)
+    [Installation](#Installation)
+    [Usage](#Usage)
     \* \[License\]\(Installation\)
-    * Contributing
+    * Contributingcs
     * Tests 
     * Questions 
       
