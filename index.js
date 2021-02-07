@@ -1,6 +1,6 @@
 const inquirer = require("inquirer");
 const fs = require("fs");
-const generateMarkdown = require("./generateMarkdown");
+// const generateMarkdown = require("./generateMarkdown");
 
 const questions = [
   {
@@ -16,12 +16,12 @@ const questions = [
   {
     type: "input",
     message: "What is your project's name?",
-    name: "project-name",
+    name: "name",
   },
   {
     type: "input",
     message: "Please write a short description of project?",
-    name: "project-description",
+    name: "description",
   },
   //LICENSE
   {
@@ -43,7 +43,7 @@ const questions = [
   {
     type: "input",
     message: "What does the user need to know about using the repo?",
-    name: "need-know",
+    name: "know",
   },
   {
     type: "input",
@@ -56,47 +56,46 @@ const questions = [
 function init() {
   inquirer.prompt(questions).then((response) => {
     const content = `
-# ${data.project-name}
+# ${response.name}
 ![Github license]
-(license with logo badge)
+
 ## Description:
-${data.project-description}
+
+${response.description}
 ## Table of Contents
-links: 
-    Installation [Installation] (#installation)
-    Usage 
-    license
-    Contributing
-    Tests 
-    Questions 
+    1. [Installation](Installation)
+     [Usage](Usage)
+    \* \[License\]\(Installation\)
+    * Contributing
+    * Tests 
+    * Questions 
       
 ## Installation
 To install necessary dependencies, run the following command:
       
 \`\`\`
-$(data.dependencies)
-      \`\`\`
-      ## Usage 
-      \`\`\`
-      $(data.need-know)
-      \`\`\`
+${response.dependencies}
+\`\`\`
+## Usage 
+\`\`\`
+${response.know}
+\`\`\`
       
-       ## license
+## License  
+This product is licensed under the ${response.license} license. 
       
-       This product is licensed under the NAME THEY PICK #license license. 
+## Contributing
+${response.contribute}
       
-       ## Contributing
-       $(data.contribute)
-      
-       ## Tests 
-       To run tests, run the following command:
+## Tests 
+To run tests, run the following command:
       
 \`\`\`
-$(data.tests)
+${response.tests}
 \`\`\`
       
 ## Questions 
-If you have any questions about the repo open an issue or contact me directly at $(data.email). You can find more of my work at $(data.github).        
+If you have any questions about the repo open an issue or contact me directly at ${response.email}. You can find more of my work at ${response.github}.        
             `;
 
     writeToFile("README.md", content);

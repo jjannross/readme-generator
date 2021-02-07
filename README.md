@@ -1,43 +1,42 @@
 
-       # $(data.project-name)
-       ![Github license]
-       (license with logo badge)
-       ## Description:
-       $(data.project-description)
-       ## Table of Contents
-        links: 
-           Installation [Installation] (#installation)
-           Usage 
-           license
-           Contributing
-           Tests 
-           Questions 
+# PLEASE WORK
+![Github license]
+
+## Description:
+
+i am hoping this denerates a readme
+## Table of Contents
+    1. [Installation](Installation)
+     [Usage](Usage)
+    * [License](Installation)
+    * Contributing
+    * Tests 
+    * Questions 
       
-      ## Installation
-      To install necessary dependencies, run the following command:
+## Installation
+To install necessary dependencies, run the following command:
       
-      ```
-      $(data.dependencies)
-      ```
-      ## Usage 
-      ```
-      $(data.need-know)
-      ```
+```
+any you would like
+```
+## Usage 
+```
+you need inquirer
+```
       
-       ## license
+## License  
+This product is licensed under the  license. 
       
-       This product is licensed under the NAME THEY PICK #license license. 
+## Contributing
+hi
       
-       ## Contributing
-       $(data.contribute)
+## Tests 
+To run tests, run the following command:
       
-       ## Tests 
-       To run tests, run the following command:
+```
+npm
+```
       
-       ```
-       $(data.tests)
-        ```
-      
-       ## Questions 
-       If you have any questions about the repo open an issue or contact me directly at $(data.email). You can find more of my work at $(data.github).        
+## Questions 
+If you have any questions about the repo open an issue or contact me directly at gmail. You can find more of my work at jennifer.        
             
